@@ -1,0 +1,135 @@
+.info {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0% auto;
+    width : 100%;
+    max-width: 700px;
+    justify-content: space-between;
+    align-items: first baseline;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item__button{
+    display: flex;
+    width: 100px;
+    height: 2rem;
+    padding: 2px 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.info-item__button:hover {
+    background: white;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0% auto;
+    width : 100%;
+    max-width: 700px;
+    line-height: 2;
+}
+.tasks__list__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: larger;
+    align-items: center;
+}
+
+.tasks__list__item__text {
+    width: 80%;    
+}
+.tasks__list__item a {
+    font-size: 25px;
+}
+.tasks__list__item a:hover {
+    color: rgb(80, 80, 190);
+    transition: all 0.5s ease;
+}
+
+.modal-container--show  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+.modal-window {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 20px 40px 20px;
+    background-color: rgba(202, 202, 202, 0.663);
+    gap: 1rem;
+    animation: fadeIn ease-in .5s backwards;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  
+.modal-window form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-window input {
+    height: 2rem;
+    width: 100%;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 5px;
+    font-size: large;
+}
+#close {
+    align-self: flex-end;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 25px;
+    background-color: rgb(139, 60, 60);
+    border: none;
+    border-radius: 5px;
+}
+.modal-window button {
+    width: 100%;
+    height: 2rem;
+    max-width: 120px;
+    
+}
+.modal-container--hide {
+    display: none;
+}
